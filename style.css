@@ -1,0 +1,187 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    background-image: url('assets/foamtender.png');
+    /* background-color: #ffbb00;  */
+}
+
+.top-navbar {
+    background-color: #000058;
+    color: #333;
+    padding: 10px 0;
+    position: relative;
+}
+
+.top-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-navbar .logo {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.top-navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-navbar nav ul li {
+    margin-right: 20px;
+}
+
+.top-navbar nav ul li:last-child {
+    margin-right: 0;
+}
+
+.top-navbar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Style untuk ikon */
+.top-navbar nav ul li a img {
+    width: 24px; /* Sesuaikan ukuran ikon */
+    height: 24px;
+}
+
+.background-image {
+    background-image: url('assets/foamtender.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Maksimum lebar konten */
+    margin: 20px auto; /* Pusatkan dan tambahkan margin atas dan bawah */
+    padding: 20px 20px; /* Padding samping */
+    box-sizing: border-box; /* Agar padding tidak menambahkan lebar */
+}
+
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 20px; /* Tambahkan margin atas */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ini yang membuat konten menjadi kolom saat layar sempit */
+    margin: 30vh 30px; 
+    bottom: 0;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ini yang membuat konten menjadi kolom saat layar sempit */
+    margin: 30px 30px; 
+}
+
+.content-logbook {
+    padding: 20px;
+    height: auto;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.column {
+    flex-basis: calc(30% - 20px); /* 20px untuk jarak antar kolom */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Tambahkan margin bawah */
+
+}
+
+.bottom-navbar {
+    position: static; 
+    bottom: 0; /* Tempatkan di bagian paling bawah halaman */
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Warna background agak transparan */
+    color: #fff;
+    padding: 5px 20px; /* Kurangi padding atas dan bawah */
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 999; /* Pastikan navbar di atas konten */
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px; /* Kurangi padding atas dan bawah */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Tambahkan margin antara tombol */
+}
+.btn:hover {
+    background-color: #000058;
+    transition: .2s ease-in-out;
+}
+
+.btn:last-child {
+    margin-right: 0; /* Hapus margin dari tombol terakhir */
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 30px;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        margin-top: 20px;
+        flex-basis: calc(80% - 40px); /* 40px untuk jarak antar kolom */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+    .column {
+        flex-basis: calc(100% - 40px); /* 40px untuk jarak antar kolom */
+    }
+}
+@media screen and (max-width: 768px) {
+    .top-navbar .container {
+        padding: 0 10px; /* Mengurangi padding samping */
+    }
+
+    .top-navbar nav ul li {
+        margin-right: 10px; /* Mengurangi margin antar item navbar */
+    }
+
+    header {
+        padding: 30px; /* Mengurangi padding header */
+    }
+
+    .content .column {
+        flex-basis: calc(100% - 40px); /* 40px untuk jarak antar kolom */
+    }
+}
